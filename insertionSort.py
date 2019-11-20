@@ -5,11 +5,12 @@ def randlist():
   sizeOf = random(3, 20)
   for i in range(2, sizeOf):
     v.append(random(0, 1000))
-    return v
+
+  return v
 
 def insertSort(v):
   for i in range(1, len(v)):
-    c = 1
+    c = i
     
     while v[c] < v[c-1]:
       if c > 0:
@@ -27,12 +28,15 @@ mode = int(input())
 
 if mode == 1:
   v=[]
-  n = int(input("numero de termos: "))
+  n = int(input("Numero de termos: "))
   for i in range (0, n, 1):
     x = int(input())
     v.append(x)
     
-  print(insertSort(v))
+  print("Original: {}".format(v))
+  print("Ordenada: {}".format(insertSort(v)))
+
 elif mode == 2:
   v = randlist()
-  print(insertSort(v))
+  print("Original: {}".format(v))
+  print("Ordenada: {}".format(insertSort(v)))
