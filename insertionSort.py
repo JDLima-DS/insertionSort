@@ -1,5 +1,7 @@
 from random import randint as random
 
+# A função abaixo retorna um vetor de tamanho 3 a 20
+# com elementos aleatórios entre 0 e 1000
 def randlist():
   v = []
   sizeOf = random(3, 20)
@@ -8,6 +10,8 @@ def randlist():
 
   return v
 
+# A função abaixo recebe uma lista e retorna a mesma lista
+# com seus elementos ordenados em ordem crescente
 def insertSort(v):
   for i in range(1, len(v)):
     c = i
